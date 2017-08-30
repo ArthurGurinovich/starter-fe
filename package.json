@@ -1,0 +1,22 @@
+{
+  "name": "starter-fe",
+  "version": "1.0.0",
+  "description": "Starter Kit for FE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurGurinovich/starter-fe.git"
+  },
+  "keywords": [
+    "fe"
+  ],
+  "author": "Arthur Gurinovich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArthurGurinovich/starter-fe/issues"
+  },
+  "homepage": "https://github.com/ArthurGurinovich/starter-fe#readme"
+}
