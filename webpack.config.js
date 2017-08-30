@@ -1,5 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const merge = require('webpack-merge');
+const devserver = require('./webpack/devserver');
+
 
 const PATHS = {
 	source: path.join(__dirname, 'source'),
@@ -16,23 +19,9 @@ const common = {
 		new HtmlWebpackPlugin({
 			title: 'webpack app'
 		})
-	]
-	// modules: {
-	// 	rules: [
-	// 		{
-
-	// 		}
-	// 	]
-	// },
-	
+	]	
 };
 
-const developmentConfig = {
-	devServer: {
-			stats: 'errors-only',
-			port: 3501
-	}
-};
 
 const productionConfig = {
 
@@ -43,12 +32,10 @@ module.exports = function(env){
 		return common;
 	}
 	if(env === 'development'){
-		return Object.assign(
-			{},
+		return merge([
 			common,
-			developmentConfig
-
-		);
+			devserver()
+		]);
 	}
 };
 
