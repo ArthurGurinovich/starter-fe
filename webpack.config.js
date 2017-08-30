@@ -6,7 +6,7 @@ const PATHS = {
 	build: path.join(__dirname, 'build')
 };
 
-module.exports = {
+const common = {
 	entry: PATHS.source + '/index.js',
 	output: {
 		path: PATHS.build,
@@ -17,4 +17,41 @@ module.exports = {
 			title: 'webpack app'
 		})
 	]
-}
+	// modules: {
+	// 	rules: [
+	// 		{
+
+	// 		}
+	// 	]
+	// },
+	
+};
+
+const developmentConfig = {
+	devServer: {
+			stats: 'errors-only',
+			port: 3501
+	}
+};
+
+const productionConfig = {
+
+};
+
+module.exports = function(env){
+	if(env === 'production'){
+		return common;
+	}
+	if(env === 'development'){
+		return Object.assign(
+			{},
+			common,
+			developmentConfig
+
+		);
+	}
+};
+
+
+
+
