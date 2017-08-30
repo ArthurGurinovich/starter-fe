@@ -1,8 +1,13 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
+const sass = require('./webpack/sass');
+const css = require('./webpack/css');
+const extractCss = require('./webpack/css.extract');
 const devserver = require('./webpack/devserver');
-
+const uglifyJS = require('./webpack/js.uglify');
+const images = require('./webpack/images');
 
 const PATHS = {
 	source: path.join(__dirname, 'source'),
@@ -10,31 +15,47 @@ const PATHS = {
 };
 
 const common = {
-	entry: PATHS.source + '/index.js',
+	entry: {
+		'index': PATHS.source + '/pages/index/index.js',
+		'login': PATHS.source + '/pages/login/login.js',
+	},
 	output: {
 		path: PATHS.build,
-		filename: '[name].js'
+		filename: './js/[name].js'
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'webpack app'
+			filename: 'index.html',
+			chunks: ['index', 'common'],
+			template: PATHS.source + '/pages/index/index.html',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'login.html',
+			chunks: ['login', 'common'],
+			template: PATHS.source + '/pages/login/login.html',
+		}),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'common'
 		})
 	]	
 };
 
-
-const productionConfig = {
-
-};
-
 module.exports = function(env){
 	if(env === 'production'){
-		return common;
+		return merge([
+			common,
+			extractCss(),
+			images()
+			//uglifyJS()
+		]);
 	}
 	if(env === 'development'){
 		return merge([
 			common,
-			devserver()
+			devserver(),
+			sass(),
+			css(),
+			images()
 		]);
 	}
 };
