@@ -6,7 +6,12 @@
   "scripts": {
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production",
-    "server": "static build"
+    "server": "static build",
+    "startr": "react-scripts start",
+    "buildr": "react-scripts build",
+    "testr": "react-scripts test --env=jsdom",
+    "ejectr": "react-scripts eject"
+    
   },
   "repository": {
     "type": "git",
@@ -35,6 +40,9 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.12"
   }
 }
