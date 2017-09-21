@@ -11,7 +11,6 @@
     "buildr": "react-scripts build",
     "testr": "react-scripts test --env=jsdom",
     "ejectr": "react-scripts eject"
-    
   },
   "repository": {
     "type": "git",
@@ -33,6 +32,13 @@
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.5.3",
     "node-static": "^0.7.9",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.1.0",
@@ -40,9 +46,11 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "history": "^4.7.2",
     "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-redux": "^5.0.0-alpha.6",
     "react-scripts": "1.0.12"
   }
 }
