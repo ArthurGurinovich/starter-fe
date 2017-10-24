@@ -1,56 +1,72 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getQuestions } from './actions/questions'; 
-import Menu from './Menu';
+import { getUsers } from './actions/users'; 
 import { Link } from 'react-router-dom';
+import './App.css';
+import Header from './Header';
 
-const App = ({ questions, onAddQuestion, onFindQuestion, getAllQuestions, ownProps }) => {
+const App = ({ questions, users, onAddQuestion, onFindQuestion, getAllQuestions, getAllUsers, ownProps }) => {
 
-  console.log(ownProps);
+
   let questionInput = '';
   let findInput = '';
 
   const addQuestion = () => {
-    console.log('Question', questionInput.value);
     onAddQuestion(questionInput.value);
     questionInput.value='';
   }
 
   const findQuestion = () => {
-    console.log('Question', findInput.value);
     onFindQuestion(findInput.value);
   }
     
     return (
       <div>
-        <Menu/>
+        <Header />
+        <div className="content">
         <div>
-          <input type="text" ref={(input) => { questionInput = input}}/>
-          <button onClick={addQuestion}>Add Question</button>
+          <input type="text" className="input" ref={(input) => { questionInput = input}}/>
+          <button onClick={addQuestion} className="btn">Add Question</button>
         </div>
         <div>
-          <input type="text" ref={(input) => { findInput = input}}/>
-          <button onClick={findQuestion}>Search Question</button>
+          <input type="text" className="input" ref={(input) => { findInput = input}}/>
+          <button onClick={findQuestion} className="btn">Search Question</button>
         </div>
         <div>
-          <button onClick={getAllQuestions}>Load all questions</button>
+          <button onClick={getAllQuestions} className="btn">Load all questions</button>
         </div>
         <ul> 
         {
             questions.map((question, index) => 
             <li key={index}>
-              <Link to={`/question/${question.id}`}>{question.name}</Link>
+              <Link to={`/question/${question._id}`}>{question.title}</Link>
             </li>
           )
         }
         </ul>
+        <div>
+          <button onClick={getAllUsers} className="btn">Get list of users</button>
+        </div>
+        <ul> 
+        {
+            users.map((user, index) => 
+            <li key={index}>
+              <Link to={`/user/${user._id}`}>{user.username}</Link>
+            </li>
+          )
+        }
+        </ul>
+        </div>
       </div>
     );
 }
 
 export default connect(
   (state, ownProps) => ({
-    questions: state.questions.filter(question => question.name.includes(state.filterQuestions)),
+    questions: state.questions,
+    users: state.users,
+    // .filter(question => question.title.includes(state.filterQuestions)),
     ownProps
   }),
   dispatch => ({
@@ -66,6 +82,9 @@ export default connect(
     },
     getAllQuestions: () => {
       dispatch(getQuestions());
+    },
+    getAllUsers: () => {
+      dispatch(getUsers());
     }
   })
 )(App);

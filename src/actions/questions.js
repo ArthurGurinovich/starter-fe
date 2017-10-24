@@ -1,20 +1,4 @@
-const loadQuestions = () => {
-          var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
-          var xhr = new XHR();
-          xhr.open('GET', 'https://intense-plateau-37410.herokuapp.com/works', true);
-
-          xhr.onload = function() {
-            let list = this.responseText;
-            let questions = JSON.parse(list);
-          }
-
-          xhr.onerror = function() {
-            alert( 'Ошибка ' + this.status );
-          }
-          xhr.send();
-};
-
-const questionsList = [
+const questionsList2 = [
 	{
 		id: 1,
 		name: 'Test Question 1'
@@ -27,6 +11,21 @@ const questionsList = [
 
 export const getQuestions = () => dispatch => {
 	setTimeout( () => {
-		dispatch({ type: 'FETCH_QUESTIONS_SUCCESS', payload: questionsList });
+            var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
+          var xhr = new XHR();
+          xhr.open('GET', 'https://intense-plateau-37410.herokuapp.com/works', true);
+          xhr.send(null);
+          xhr.onreadystatechange = function() {
+            if (this.readyState != 4) 
+              return;
+            if (this.status != 200) {
+              // обработать ошибку
+              alert( 'ошибка: ' + (this.status ? this.statusText : 'Запрос не удался') );
+              return;
+            }
+
+            var questionsList = JSON.parse(this.responseText);
+            dispatch({ type: 'FETCH_QUESTIONS_SUCCESS', payload: questionsList2 });
+          }
     }, 2000);
 }

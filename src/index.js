@@ -4,11 +4,13 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import App from './App';
 import Question from './Question';
+import Users from './Users';
 import reducer from './reducers/index';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import {
   HashRouter,
+  Switch,
   Route
 } from 'react-router-dom';
 
@@ -32,10 +34,11 @@ const store = createStore(
 ReactDOM.render(
 	<Provider store={store}>
 		<ConnectedRouter history={history}>
-			<div>
-				<Route path="/" component={App} />
-				<Route path="/question/:id" component={Question} />
-			</div>
+		<Switch>
+			<Route exact path="/" component={App} />
+		    <Route path="/question/:id" component={Question} />
+			<Route path="/user/:id" component={Users} />
+		</Switch>	
 		</ConnectedRouter>
 	</Provider>, 
 	document.getElementById('root')

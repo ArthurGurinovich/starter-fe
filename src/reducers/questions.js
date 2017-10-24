@@ -1,9 +1,4 @@
-const initialState = [
-	{
-		id: 1234,
-		name: 'Question Here'
-	}
-];
+const initialState = [];
 
 
 export default function questions(state = initialState, action){

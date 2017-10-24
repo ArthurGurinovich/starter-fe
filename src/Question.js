@@ -5,15 +5,14 @@ const Question = ({ question }) => {
 	console.log(question);
     return (
       <div>
-        	{question.name}
+        	{question.description}
       </div> 
     );
 };
 
 const mapStateToProps = (state, ownProps) => {
-	console.log(ownProps);
 	return {
-		question: state.questions.find(question => question.id === Number(ownProps.match.params.id))
+		question: state.questions.find(question => question._id === ownProps.match.params.id)
 	};
 };
 
