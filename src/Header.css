@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+header {
+	padding: 10px 20px;
+	border-bottom: 1px solid #e2e2e2;
+	height: 60px;
+}
+
+header .logo{
+	width: 30%;
+	line-height: 60px;
+	display: inline-block;
+}
+
+header .logo .title{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 32px;
+}
+
+header .links{
+	width: 70%;
+	display: inline-block;
+	line-height: 60px;
+}
+
+header .links a{
+	color: #242424;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 10px;
+}
