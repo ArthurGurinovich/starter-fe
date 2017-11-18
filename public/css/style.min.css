@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:400,600,700");
+header {
+  padding: 15px 50px;
+  height: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #F3F3F3;
+  position: fixed;
+  top: 0;
+  z-index: 3; }
+  header .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    width: 30%; }
+    header .logo .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      background: linear-gradient(to bottom right, #8175F7, #2196f3);
+      color: #ffffff;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 40px;
+      display: inline-block; }
+    header .logo .title {
+      margin-left: 7px;
+      font-size: 0.9rem;
+      text-align: left;
+      vertical-align: bottom;
+      display: inline-block; }
+  header .search {
+    width: 30%;
+    display: inline-block; }
+    header .search input {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      border-radius: 7px;
+      background-color: #F3F3F3;
+      font-weight: 500;
+      font-family: Montserrat,sans-serif;
+      font-size: .8rem; }
+      header .search input::placeholder {
+        color: #969696; }
+  header .lines {
+    width: 30%;
+    display: inline-block;
+    text-align: right; }
+    header .lines .section {
+      margin: 0 5px;
+      padding: 10px;
+      display: inline-block;
+      color: #242424; }
+      header .lines .section a {
+        color: #242424;
+        text-decoration: none;
+        font-weight: 500;
+        font-family: Montserrat,sans-serif;
+        font-size: .8rem; }
+        header .lines .section a:hover {
+          cursor: pointer;
+          color: #2196f3; }
+
+footer {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #F3F3F3;
+  padding: 20px 0; }
+  footer .section {
+    width: 20%;
+    padding: 0 0 0 50px;
+    display: inline-block;
+    color: #242424;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; }
+    footer .section a {
+      color: #242424;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      display: block;
+      margin-top: 10px; }
+      footer .section a:hover {
+        cursor: pointer;
+        color: #2196f3; }
+    footer .section .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 50px;
+      vertical-align: middle; }
+      footer .section .logo .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background: linear-gradient(to bottom right, #8175F7, #2196f3);
+        color: #ffffff;
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 40px;
+        display: inline-block; }
+      footer .section .logo .title {
+        margin-left: 7px;
+        font-size: 0.9rem;
+        text-align: left;
+        vertical-align: bottom;
+        display: inline-block; }
+  footer .copy {
+    display: block;
+    font-family: Montserrat,sans-serif;
+    font-size: 0.8rem; }
+    footer .copy .copyright {
+      text-align: center;
+      color: #969696;
+      font-weight: 500; }
+
+.profile {
+  position: relative;
+  width: 30%;
+  margin: 10px;
+  background-color: #ffffff;
+  border: 1px solid #F3F3F3;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #F3F3F3;
+  display: inline-block;
+  padding: 20px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif; }
+  .profile .info {
+    padding: 0 0 20px 0;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif; }
+    .profile .info .image {
+      display: inline-block;
+      margin: 5px; }
+      .profile .info .image img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%; }
+    .profile .info .account {
+      display: inline-block;
+      padding: 20px 0 0 20px;
+      vertical-align: top; }
+      .profile .info .account .username {
+        color: #242424;
+        font-weight: 500;
+        font-size: 1rem;
+        margin-bottom: 5px; }
+      .profile .info .account .status {
+        color: #61DC73;
+        display: inline-block;
+        font-weight: 500;
+        border-right: 1px solid #F3F3F3;
+        margin-right: 5px;
+        padding-right: 5px; }
+      .profile .info .account .position {
+        color: #969696;
+        font-weight: 500;
+        display: inline-block; }
+      .profile .info .account .email {
+        color: #969696;
+        margin-top: 5px; }
+    .profile .info input {
+      display: block;
+      border: none;
+      border-bottom: 1px solid #E5E5E5;
+      width: 100%;
+      padding: 5px;
+      margin: 10px 0;
+      outline: none;
+      font-family: Montserrat,sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem; }
+      .profile .info input[type="submit"] {
+        margin: 30px 0 10px;
+        padding: 12px 20px;
+        background: linear-gradient(to bottom right, #8175F7, #2196f3);
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-family: Montserrat,sans-serif;
+        font-weight: 500;
+        width: 100%;
+        font-size: 0.9rem;
+        transition: box-shadow 0.5s; }
+        .profile .info input[type="submit"]:hover {
+          box-shadow: 0 5px 20px #969696; }
+      .profile .info input[type="text"]:focus {
+        border-bottom: 1px solid #2196f3; }
+      .profile .info input[type="password"]:focus {
+        border-bottom: 1px solid #2196f3; }
+      .profile .info input[type="email"]:focus {
+        border-bottom: 1px solid #2196f3; }
+      .profile .info input::placeholder {
+        color: #969696; }
+  .profile .actions {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff; }
+    .profile .actions .action {
+      text-align: center;
+      padding: 3px 10px;
+      margin: 5px 0;
+      background-color: #2196f3;
+      border-radius: 25px;
+      font-size: 0.8rem; }
+      .profile .actions .action:hover {
+        cursor: pointer; }
+  .profile .password {
+    position: relative;
+    border-top: 1px solid #F3F3F3;
+    padding: 20px 0 0 20px;
+    font-weight: 400px; }
+    .profile .password:hover {
+      cursor: pointer; }
+
+.questions {
+  position: relative;
+  width: 30%;
+  margin: 10px;
+  background-color: #ffffff;
+  border: 1px solid #F3F3F3;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #F3F3F3;
+  display: block;
+  padding: 20px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif; }
+
+.page-title {
+  font-family: 'Montserrat', sans-serif; }
+  .page-title h1 {
+    font-weight: 500;
+    font-size: 1.4rem; }
+
+.user {
+  position: relative;
+  width: 180px;
+  margin: 10px 5px;
+  background-color: #ffffff;
+  border: 1px solid #F3F3F3;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #F3F3F3;
+  display: inline-block;
+  padding: 10px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif; }
+  .user:hover {
+    box-shadow: 0 0 10px  #9e9e9e; }
+    .user:hover .actions {
+      visibility: visible; }
+      .user:hover .actions:hover {
+        cursor: pointer; }
+  .user .info {
+    display: inline-block;
+    vertical-align: top;
+    padding: 30px 10px;
+    text-align: center;
+    margin: 20px;
+    border-bottom: 1px solid #F3F3F3; }
+    .user .info .avatar {
+      margin: 5px; }
+      .user .info .avatar img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%; }
+    .user .info .username {
+      line-height: 20px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      font-family: 'Montserrat', sans-serif; }
+      .user .info .username a {
+        color: #242424;
+        text-decoration: none; }
+        .user .info .username a:hover {
+          color: #2196f3;
+          cursor: pointer; }
+    .user .info .position {
+      color: #969696;
+      line-height: 20px;
+      font-weight: 400;
+      font-size: 0.8rem;
+      font-family: 'Montserrat', sans-serif; }
+
+.list {
+  display: block;
+  position: relative; }
+
+#header_promo {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  margin-top: 80px;
+  font-family: 'Montserrat', sans-serif; }
+  #header_promo .teaser-video {
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  #header_promo .header_video {
+    position: relative;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.37);
+    z-index: 2;
+    height: 600px; }
+    #header_promo .header_video .header_info {
+      padding: 150px 0 200px; }
+      #header_promo .header_video .header_info h1 {
+        font-size: 2rem; }
+      #header_promo .header_video .header_info p {
+        font-size: 1rem; }
+    #header_promo .header_video .video_button {
+      text-decoration: none;
+      display: inline-block;
+      width: 150px;
+      outline: none;
+      margin: 30px;
+      padding: 12px 20px;
+      background: linear-gradient(to bottom right, #8175F7, #2196f3);
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-family: Montserrat,sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: box-shadow 0.5s; }
+      #header_promo .header_video .video_button:hover {
+        box-shadow: 0 5px 20px #969696; }
+
+.question {
+  position: relative;
+  width: 30%;
+  margin: 10px 5px;
+  background-color: #ffffff;
+  border: 1px solid #F3F3F3;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #F3F3F3;
+  display: inline-block;
+  padding: 20px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif; }
+  .question:hover {
+    box-shadow: 0 0 10px  #9e9e9e; }
+    .question:hover .actions {
+      visibility: visible; }
+      .question:hover .actions:hover {
+        cursor: pointer; }
+  .question .actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    padding: 10px;
+    visibility: hidden;
+    font-size: 1.5rem;
+    line-height: 10px;
+    color: #03a9f4; }
+  .question .type {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid #03a9f4;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #03a9f4;
+    line-height: 40px;
+    display: inline-block; }
+  .question .info {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 10px; }
+    .question .info .related-story {
+      color: #9e9e9e;
+      font-size: 0.7rem;
+      line-height: 15px;
+      font-weight: 500; }
+      .question .info .related-story a {
+        color: #e91e63;
+        text-decoration: none;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif; }
+        .question .info .related-story a:hover {
+          cursor: pointer; }
+    .question .info .title {
+      color: #242424;
+      line-height: 20px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      font-family: 'Montserrat', sans-serif; }
+
+.list {
+  display: block;
+  position: relative; }
+
+.account_form {
+  margin: 10% auto;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  width: 300px;
+  font-family: Montserrat,sans-serif;
+  font-weight: 400;
+  border: 1px solid #F3F3F3;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #d3d3d3; }
+  .account_form h1 {
+    margin: 5px 0;
+    font-size: 1.6rem;
+    font-weight: 500; }
+  .account_form h6 {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #242424;
+    text-align: center; }
+    .account_form h6 a {
+      color: #2196f3;
+      text-decoration: none; }
+      .account_form h6 a:hover {
+        cursor: pointer; }
+  .account_form p {
+    color: #969696;
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.3rem; }
+  .account_form .head .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 50px; }
+    .account_form .head .logo .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      background: linear-gradient(to bottom right, #8175F7, #2196f3);
+      color: #ffffff;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 40px;
+      display: inline-block; }
+    .account_form .head .logo .title {
+      margin-left: 7px;
+      font-size: 0.9rem;
+      text-align: left;
+      vertical-align: bottom;
+      display: inline-block; }
+  .account_form .forgot {
+    display: block;
+    margin-top: 30px;
+    color: #242424;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: color 0.2s; }
+    .account_form .forgot:hover {
+      cursor: pointer;
+      color: #2196f3; }
+  .account_form input {
+    display: block;
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem; }
+    .account_form input[type="submit"] {
+      margin: 30px 0 10px;
+      padding: 12px 20px;
+      background: linear-gradient(to bottom right, #8175F7, #2196f3);
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-family: Montserrat,sans-serif;
+      font-weight: 500;
+      width: 100%;
+      font-size: 0.9rem;
+      transition: box-shadow 0.5s; }
+      .account_form input[type="submit"]:hover {
+        box-shadow: 0 5px 20px #969696; }
+    .account_form input[type="text"]:focus {
+      border-bottom: 1px solid #2196f3; }
+    .account_form input[type="password"]:focus {
+      border-bottom: 1px solid #2196f3; }
+    .account_form input::placeholder {
+      color: #969696; }
+
+body {
+  background-color: #F8F8F8;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 14px; }
+
+.container {
+  padding: 120px 50px;
+  margin: 0 auto; }

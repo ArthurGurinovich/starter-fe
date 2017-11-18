@@ -5,6 +5,8 @@ import { getUsers } from './actions/users';
 import { Link } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
+import Video from './Video';
+import Footer from './Footer';
 
 const App = ({ questions, users, onAddQuestion, onFindQuestion, getAllQuestions, getAllUsers, ownProps }) => {
 
@@ -23,7 +25,8 @@ const App = ({ questions, users, onAddQuestion, onFindQuestion, getAllQuestions,
     
     return (
       <div>
-        <Header />
+        <Header/>
+        <Video/>
         <div className="content">
         <div>
           <input type="text" className="input" ref={(input) => { questionInput = input}}/>
@@ -58,7 +61,9 @@ const App = ({ questions, users, onAddQuestion, onFindQuestion, getAllQuestions,
         }
         </ul>
         </div>
+        <Footer/>
       </div>
+
     );
 }
 
