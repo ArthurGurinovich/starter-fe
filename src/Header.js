@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
+
 import './Header.css';
 import { Link } from 'react-router-dom';
 
@@ -21,7 +22,7 @@ class Header extends Component {
                 </div>
             </div>
             <div className="search">
-                <input type="text" name="search" value=""   placeholder="Find users" />
+                <input type="text" name="search" placeholder="Find users" />
             </div>
             <div className="lines">
                  <div className="section">

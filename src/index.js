@@ -5,6 +5,11 @@ import { createStore, applyMiddleware } from 'redux';
 import App from './App';
 import Question from './Question';
 import Users from './Users';
+
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
+import Forgot from './components/Forgot';
+
 import reducer from './reducers/index';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
@@ -38,6 +43,9 @@ ReactDOM.render(
 			<Route exact path="/" component={App} />
 		    <Route path="/question/:id" component={Question} />
 			<Route path="/user/:id" component={Users} />
+			<Route path="/signin" component={SignIn} />
+			<Route path="/signup" component={SignUp} />
+			<Route path="/forgot" component={Forgot} />
 		</Switch>	
 		</ConnectedRouter>
 	</Provider>, 
