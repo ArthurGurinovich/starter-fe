@@ -9,6 +9,7 @@ import Users from './Users';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Forgot from './components/Forgot';
+import Profile from './components/Profile';
 
 import reducer from './reducers/index';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -46,6 +47,7 @@ ReactDOM.render(
 			<Route path="/signin" component={SignIn} />
 			<Route path="/signup" component={SignUp} />
 			<Route path="/forgot" component={Forgot} />
+			<Route path="/current-user" component={Profile} />
 		</Switch>	
 		</ConnectedRouter>
 	</Provider>, 

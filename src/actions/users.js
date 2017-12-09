@@ -1,4 +1,5 @@
-var request = require("request");
+import request from 'request';
+import { setCookie } from './spCookie';
 
 export const getUsers = () => dispatch => {
   var options = { method: 'GET',
@@ -35,15 +36,18 @@ export const loginUser = (username, password) => dispatch => {
 
     console.log(body);
     let spToken = body;
+    setCookie('SP-Token', body, 7)
     dispatch({ type: 'LOGIN_USER_SUCCESS', payload: {SPToken: spToken} });
+    currentUser(spToken);
   }); 
-}
-export const currentUser = (SPToken) => dispatch => {
+}; 
+
+export const currentUser = (Token) => dispatch => {
   var options = { method: 'GET',
     url: 'http://localhost:4000/api/current-user',
     headers: 
      { 'content-type': 'application/json',
-       'SP-Token': SPToken },
+       'SP-Token': Token },
     json: true };
 
   request(options, function (error, response, body) {

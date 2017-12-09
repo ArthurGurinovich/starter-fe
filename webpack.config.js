@@ -23,6 +23,11 @@ const common = {
 		path: PATHS.build,
 		filename: './js/[name].js'
 	},
+	// resolve: {
+	// 	root: path.resolve(__dirname, '/app'),
+	// 	modulesDirectories: ['node_modules'],
+	// 	extensions: ['', '.js']
+	// },
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: 'index.html',

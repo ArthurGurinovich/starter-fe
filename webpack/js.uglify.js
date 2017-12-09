@@ -7,7 +7,8 @@ module.exports = function(){
 				compress: {
 					warnings: false
 				}
-			})
+			}),
+			new webpack.NoErrorsPlagin()
 		]
 	};
 };
